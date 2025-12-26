@@ -119,12 +119,16 @@ p {
 }*/
 
 .setumei {
+  font-family: "Shippori Mincho", serif;
   font-size: 15px;
   font-family: shippori_regular;
   background-color: #DDD;
 }
 
 .item_setumei {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 20px;
   margin-left: 30px;
   width: 1000px;
