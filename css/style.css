@@ -43,13 +43,13 @@ body {
 }
 
 .header_logo {
-  width: 400px;
+  width: 200px;
   padding-top: 20px;
   padding-left: 20px;
 }
 
 .logo {
-  width: 350px;
+  width: 100%;
 }
 
 /*.nav {
@@ -60,11 +60,13 @@ body {
 
 nav ul {
   font-family: shippori_bold;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
   display: flex;
   list-style-type: none;
   position: absolute; /*headerのposition: relative;によって、ヘッダー部分の中での位置を指定できる relativeとabsoluteはセットが多い*/
+  top: 20px;
   right: 20px;
-  bottom: 20px;
 }
 /*子孫セレクタ　navの中のulに適用*/
 
@@ -84,82 +86,159 @@ a:visited {
 
 .page_title {
   font-family: shippori_bold;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
   font-size: 40px;
   text-align: center;
   color: #dddff3;
 }
 
+h1, h2 {
+  color: #dddff3;
+}
+
 p {
-  font-size: 62.5%; /*デフォルトの16pxを10pxに　remで指定していろんな大きさに*/
+  font-size: 62.5%; /*デフォルトの16pxを10pxに　remで指定していろんな大きさにする予定*/
+  color: #dddff3;
   font-family: shippori_regular
+  
 }
 
 .scroll_container {
   width: 100%; /* 親の幅は画面いっぱい */
-  background-color: #f0f0f0; /* 薄いグレー */
+  height: max-content;
+  background-color: #191a33;
+  border-radius: 10px;
   padding: 20px;
   /*border: 1px solid #ccc;*/
   box-sizing: border-box; /* paddingを含めて幅100%にするため */
-  display: flex; /*要素を横並びに*/
   overflow-x: auto; /*はみ出した時だけ、スクロールバーを表示します。はみ出していない時は表示しません。*/
+  cursor: grab; /* 掴めるようなアイコンにする */
+  /*scrollbar-width: none; /* Firefoxでスクロールバーを隠す */
+}
+
+.scroll_container img {
+  pointer-events: none; /* 画像へのマウスイベントを無効化（一番確実）*/
+}
+
+/* Chrome, Safari用：スクロールバーを隠す */
+/* .scroll_container::-webkit-scrollbar {
+  display: none;
+}  */
+
+/*scriptで指定したactiveクラスがついたときだけのスタイル*/
+.scroll_container:active {
+  cursor: grabbing; /* ドラッグ中のアイコン */
+  /*background-color: #e0e0e0; /* 背景を少し暗くする */
+  /*transform: scale(0.99);    /* ギュッと押し込んだような演出 */
+}
+
+.scroll_content {
+  display: flex; /*要素を横並びに*/
+  padding: 0 50px;
+  flex-direction: row; /* PCでは横並び */
+}
+
+/* 画面幅が狭い（タブレット）の時 */
+@media (max-width: 1024px) {
+  .scroll_content {
+    flex-direction: column; /* 縦並びにチェンジ！ */
+  }
 }
 
 .scroll_item {
-  width: 1200px; /* アイテムの幅を200pxに固定 */
+  width: 900px; /* アイテムの幅をそのpxに固定 */
   /*height: 150px;*/
   display: flex; /*文字と画像(divブロック要素)が中央揃えに*/
-  margin-right: 12px; /* アイテム間の余白 */
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-shrink: 0; /* 縮まないようにする 親の幅に合わせて縮まないで（縮小率0）という意味 */
+  white-space: normal; /* テキストは改行させる */
 }
 
-/*.item2 {
-  display: flex;
+@media (max-width: 1024px) {
+  .scroll_item img {
+    width: 700px;
+    object-fit: contain;
+  }
+}
+
+
+.scroll_item img {
+  /* width: 100%; */
+  /* height: 100%; */
+  object-fit: contain;
+}
+
+.image_item {
+  margin-right: 20px;
+}
+
+/*.image_area img {
+  padding: 20px;
+  object-fit: contain;
 }*/
-
-.setumei {
-  font-family: "Shippori Mincho", serif;
-  font-size: 15px;
-  font-family: shippori_regular;
-  background-color: #DDD;
-}
 
 .item_setumei {
   font-family: "Shippori Mincho", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  font-size: 1.5rem;
   margin-left: 30px;
   width: 1000px;
   height: 400px;
   text-align: left;
 }
 
-/*.item_t {
-  width: 1000px;
-}*/
-
-.item1_text {
-  width: 500px;
+.text_item {
+  width: 250px;
   height: 400px;
+  font-size: 1.5rem;
+  margin-right: 50px;
 }
+
+.item6 {
+  width: 300px;
+  padding-right: 50px;
+}
+
+.theme {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+}
+
+.theme_sub {
+  font-size: 1.5rem;
+}
+
+.theme_sub2 {
+  margin-left: 7px;
+}
+
+.controlls {
+  justify-content: center;
+}
+
 
 /*ABOUTとCONCEPTのCSS*/
 .section {
-  background-color: #727272;
+  background-color: #191a33;
+  border-radius: 10px;
   padding: 16px;
   margin: 0px 40px 50px 40px;
 }
 
 .midasi {
-  font-family: shippori_regular;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
   font-size: 24px;
-  color: #dddff3;
+  /* color: #dddff3; */
+  margin-bottom: 35px;
 
 }
 
 .writing {
   font-size: 1.6rem;
-  color: #dddff3;
+  /* color: #dddff3; */
 }
