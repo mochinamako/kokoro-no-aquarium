@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script/script.js" defer></script>
 </head>
 
 <body>
@@ -30,36 +31,66 @@
 
     <!-- <p class="setumei">ここにはたくさんの不思議な生き物たちがいます。かれらの生活をのぞいてみましょう。</p> -->
 
-    <div class="scroll_container">
-        <div class="scroll_item item_t">
-            <p class="item_setumei">「心のアクアリウム」へようこそ。<br>心の中に棲む、ふしぎなイキモノたちの世界をお楽しみください。</p>
-        </div>
-        <div class="scroll_item item1">
-            <img src="images/kokoro_aquarium_top.png" alt="ピンクの背景に魚や抽象図形が描かれたイラスト">
-        </div>
-        <div class="scroll_item item1_text">
-            <p>作品に関する言語表現<br>オノマトペやショートエッセイ？</p>
-        </div>
-        <div class="scroll_item item2">
-            <img src="images/kokoro_aquarium_dark.png" alt="ダーク">
-            <div>
-                <p>作品に関する言語表現<br>オノマトペやショートエッセイ？</p>
+    <div class="scroll_container" id="scrollContainer">
+        <div class="scroll_content">
+            <div class="scroll_item item_t">
+                <p class="item_setumei">「心のアクアリウム」へようこそ<br>心の中に棲む、ふしぎなイキモノたちの世界をのぞいてみましょう</p>
             </div>
-        </div>
-        <div class="scroll_item item3">
-            <img src="images/twilight_blue.png" alt="青の背景に線画のサンゴ">
-        </div>
-        <div class="scroll_item item4">
-            <img src="images/twilight_white.png" alt="薄いベージュの背景に線画のサンゴ">
-        </div>
-        <div class="scroll_item item5">
-            <img src="images/the_paradise_lively.png" alt="カラフルな線画の架空生物のイラスト">
-        </div>
-        <div class="scroll_item item6">
-            <img src="images/the_paradise_order.png" alt="青の背景に白い線画の架空生物のイラスト">
-        </div>
 
+            <div class="scroll_item image_item">
+                <img src="images/kokoro_aquarium_top.png" alt="ピンクの背景に魚や抽象図形が描かれたイラスト">
+            </div>
+            <div class="scroll_item text_item">
+                <h2 class="theme">汀<span class="theme_sub">みぎわ</span><span class="theme_sub2">-明-</span></h2>
+                <p>ぽかぽか　ふわふわ　ワクワク<br>穏やかで温かい光に包まれていたいとき、空を見て、静かな決意に満たされる。</p>
+            </div>
+            <div class="scroll_item image_item">
+                <img src="images/kokoro_aquarium_dark.png" alt="ダーク">
+            </div>
+            <div class="scroll_item text_item">
+                <h2 class="theme">汀<span class="theme_sub">みぎわ</span><span class="theme_sub2">-暗-</span></h2>
+                <p>ゆらゆら　さらさら　うとうと<br>ときどき、暗いのが心地いいときがある。かすかな音に耳を済ませて、まどろむ。</p>
+            </div>
+
+            <div class="scroll_item image_item">
+                <img src="images/twilight_blue.png" alt="青の背景に線画のサンゴ">
+            </div>
+            <div class="scroll_item text_item">
+                <h2 class="theme">海日<span class="theme_sub">かいじつ</span><span class="theme_sub2">-明-</span></h2>
+                <p>とぷとぷ　さらさら　ぷくぷく<br>穏やかな昼下がり、あの子たちのおしゃべりが聴こえる。弾ける泡、太陽のつぶやき、遠ざかる波。</p>
+            </div>
+
+            <div class="scroll_item image_item">
+                <img src="images/twilight_white.png" alt="薄いベージュの背景に線画のサンゴ">
+            </div>
+            <div class="scroll_item text_item">
+                <h2 class="theme">海日<span class="theme_sub">かいじつ</span><span class="theme_sub2">-暗-</span></h2>
+                <p>キラキラ　ひそひそ　ソワソワ<br>静寂の中にいると、聴こえてくるものがある。街の寝息、月のささやき、近づく鼓動。</p>
+            </div>
+
+            <div class="scroll_item image_item">
+                <img src="images/the_paradise_lively.png" alt="カラフルな線画の架空生物のイラスト">
+            </div>
+            <div class="scroll_item text_item">
+                <h2 class="theme">巨海<span class="theme_sub">こかい</span><span class="theme_sub2">-明-</span></h2>
+                <p>がやがや　ごぽごぽ　ウキウキ<br>にぎやかで、カラフルな楽園。混沌としているようで、ありとあらゆるものが輝く世界。目を覚ますと、すぐそばに感じる。</p>
+            </div>
+
+            <div class="scroll_item image_item">
+                <img src="images/the_paradise_order.png" alt="青の背景に白い線画の架空生物のイラスト">
+            </div>
+            <div class="scroll_item text_item item6">
+                <h2 class="theme">巨海<span class="theme_sub">こかい</span><span class="theme_sub2">-暗-</span></h2>
+                <p>ざわざわ　しゅるしゅる　とくとく<br>整然とした、調和のとれた楽園。途方もない時間を経て築かれた、秩序に導かれた世界。眠りにつくとき、私を満たす。</p>
+            </div>
+
+        </div>
     </div>
+
+    <!-- <div class="controls">
+        <button id="imageSwitchBtn">画像を切り替える</button>
+    </div> -->
+
     <!-- <footer>
         <p>心のアクアリウム</p>
     </footer> -->
